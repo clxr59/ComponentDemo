@@ -28,7 +28,7 @@ public class MainApplication extends Application implements IApplicationComponen
                 Log.i(TAG, "initApplication: ---- " + strName);
                 Class<?> clazz = Class.forName(strName);
                 Object instance = clazz.newInstance();
-                ((IApplicationComponent)instance).initApplication(this);
+                ((IApplicationComponent)instance).initApplication(app);
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {
